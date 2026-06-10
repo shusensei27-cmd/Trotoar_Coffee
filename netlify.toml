@@ -32,16 +32,6 @@
   to = "/pages/contact.html"
   status = 200
 
-[[redirects]]
-  from = "/blog"
-  to = "/pages/blog.html"
-  status = 200
-
-[[redirects]]
-  from = "/reservation"
-  to = "/pages/reservation.html"
-  status = 200
-
 [[headers]]
   for = "/*"
   [headers.values]
