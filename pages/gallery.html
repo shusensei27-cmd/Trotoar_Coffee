@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Trotoar Coffee</title>
+    <meta name="description" content="Gallery foto dan video Trotoar Coffee. Suasana, momen, dan cerita di balik kopi dan curhat.">
+    <meta name="keywords" content="gallery trotoar coffee, foto coffee shop, suasana cafe, video kopi">
+    <meta name="author" content="Muhammad Yudho Arga Wibowo, S.Pd.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://trotoarcoffee.netlify.app/pages/gallery.html">
+    <meta property="og:title" content="Gallery | Trotoar Coffee">
+    <meta property="og:description" content="Gallery foto dan video Trotoar Coffee. Suasana, momen, dan cerita.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trotoarcoffee.netlify.app/pages/gallery.html">
+    <meta property="og:image" content="https://trotoarcoffee.netlify.app/assets/images/ig_gallery_1.jpg">
+    <meta property="og:locale" content="id_ID">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery | Trotoar Coffee">
+    <meta name="twitter:description" content="Gallery foto dan video Trotoar Coffee.">
+    <meta name="twitter:image" content="https://trotoarcoffee.netlify.app/assets/images/ig_gallery_1.jpg">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+    <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <nav class="navbar" id="pageNavbar" role="navigation">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-logo">
+                <img src="../assets/images/Logo_Trotoar.png" alt="Trotoar Coffee" class="logo-img"><span class="logo-text">Trotoar Coffee</span>
+            </a>
+            <button class="hamburger" id="pageHamburger" aria-label="Buka menu" aria-expanded="false">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </button>
+            <ul class="navbar-menu" role="menubar">
+                <li role="none"><a href="../index.html" class="navbar-link">Home</a></li>
+                <li role="none"><a href="about.html" class="navbar-link">Tentang</a></li>
+                <li role="none"><a href="menu.html" class="navbar-link">Menu</a></li>
+                <li role="none"><a href="gallery.html" class="navbar-link active">Gallery</a></li>
+                <li role="none"><a href="curhat.html" class="navbar-link">Curhat</a></li>
+                <li role="none"><a href="event.html" class="navbar-link">Event</a></li>
+                <li role="none"><a href="contact.html" class="navbar-link">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mobile-overlay" id="pageMobileOverlay" aria-hidden="true">
+        <ul class="mobile-menu">
+            <li><a href="../index.html" class="mobile-link" data-close>Home</a></li>
+            <li><a href="about.html" class="mobile-link" data-close>Tentang</a></li>
+            <li><a href="menu.html" class="mobile-link" data-close>Menu</a></li>
+            <li><a href="gallery.html" class="mobile-link" data-close>Gallery</a></li>
+            <li><a href="curhat.html" class="mobile-link" data-close>Curhat</a></li>
+            <li><a href="event.html" class="mobile-link" data-close>Event</a></li>
+            <li><a href="contact.html" class="mobile-link" data-close>Kontak</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <p class="page-breadcrumb"><a href="../index.html">Home</a> / Gallery</p>
+                <h1 class="section-heading">Gallery</h1>
+            </div>
+        </section>
+
+        <section class="gallery-filter-section">
+            <div class="container">
+                <div class="menu-filter-bar reveal-fade-up">
+                    <button class="menu-filter-btn active" data-filter="all">Semua</button>
+                    <button class="menu-filter-btn" data-filter="interior">Interior</button>
+                    <button class="menu-filter-btn" data-filter="outdoor">Outdoor</button>
+                    <button class="menu-filter-btn" data-filter="coffee">Coffee</button>
+                    <button class="menu-filter-btn" data-filter="moment">Moment</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section section-padding">
+            <div class="container">
+                <div class="gallery-grid-full" id="galleryGrid">
+                    <div class="gallery-item reveal-fade-up" data-category="moment" data-gallery>
+                        <img src="../assets/images/ig_gallery_3.png" alt="Momen Trotoar Coffee" loading="lazy">
+                        <div class="gallery-item-overlay"><span class="gallery-icon">+</span></div>
+                    </div>
+                    <div class="gallery-item reveal-fade-up" data-category="moment" data-gallery>
+                        <img src="../assets/images/ig_gallery_2.png" alt="Momen Trotoar Coffee" loading="lazy">
+                        <div class="gallery-item-overlay"><span class="gallery-icon">+</span></div>
+                    </div>
+                    <div class="gallery-item reveal-fade-up" data-category="moment" data-gallery>
+                        <img src="../assets/images/ig_gallery_1.jpg" alt="Instagram post Trotoar Coffee" loading="lazy">
+                        <div class="gallery-item-overlay"><span class="gallery-icon">+</span></div>
+                    </div>
+                    <div class="gallery-item wide reveal-fade-up" data-category="moment" data-gallery data-video>
+                        <video src="../assets/videos/ig_gallery_video_1.mp4" preload="metadata" muted playsinline></video>
+                        <div class="gallery-item-overlay"><span class="gallery-icon gallery-icon-play">&#9654;</span></div>
+                    </div>
+                    <div class="gallery-item reveal-fade-up" data-category="moment" data-gallery data-video>
+                        <video src="../assets/videos/ig_gallery_video_2.mp4" preload="metadata" muted playsinline></video>
+                        <div class="gallery-item-overlay"><span class="gallery-icon gallery-icon-play">&#9654;</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <svg class="back-to-top-svg" viewBox="0 0 48 48" width="48" height="48">
+            <circle class="back-to-top-track" cx="24" cy="24" r="21" fill="none" stroke="rgba(122,122,122,0.2)" stroke-width="2"/>
+            <circle class="back-to-top-fill" id="backToTopFill" cx="24" cy="24" r="21" fill="none" stroke="#9B7B65" stroke-width="2" stroke-linecap="round" transform="rotate(-90 24 24)" stroke-dasharray="131.95" stroke-dashoffset="131.95"/>
+        </svg>
+        <span class="back-to-top-arrow">&#8593;</span>
+    </button>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/images/Logo_Trotoar.png" alt="Trotoar Coffee" class="footer-logo-img">
+                    <h3 class="footer-name">Trotoar Coffee</h3>
+                    <p class="footer-slogan">kopi dan curhat</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">Tentang</a>
+                    <a href="menu.html" class="footer-link">Menu</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                    <a href="curhat.html" class="footer-link">Curhat</a>
+                    <a href="event.html" class="footer-link">Event</a>
+                    <a href="contact.html" class="footer-link">Kontak</a>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-info">
+                    <p class="footer-owner">Owner: <strong>Muhammad Yudho Arga Wibowo, S.Pd.</strong></p>
+                    <p class="footer-copy">&copy; 2026 Trotoar Coffee. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animation.js"></script>
+    <script>
+        (function() {
+            const filterBtns = document.querySelectorAll('.gallery-filter-section .menu-filter-btn');
+            const items = document.querySelectorAll('#galleryGrid [data-category]');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+                    items.forEach(item => {
+                        item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+                    });
+                });
+            });
+
+            // Lightbox
+            const galleryItems = document.querySelectorAll('[data-gallery]');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImage');
+            const lightboxVideo = document.getElementById('lightboxVideo');
+            if (galleryItems.length && lightbox) {
+                const mediaItems = Array.from(galleryItems).map(item => {
+                    const video = item.querySelector('video');
+                    const img = item.querySelector('img');
+                    if (video) return { src: video.currentSrc || video.src, type: 'video' };
+                    if (img) return { src: img.src, type: 'image' };
+                    return null;
+                }).filter(Boolean);
+                let current = 0;
+
+                function open(idx) {
+                    current = idx;
+                    const item = mediaItems[current];
+                    if (item.type === 'video') {
+                        lightboxImg.style.display = 'none';
+                        lightboxVideo.style.display = 'block';
+                        lightboxVideo.src = item.src;
+                        lightboxVideo.load();
+                        lightboxVideo.play();
+                        lightbox.classList.add('show-video');
+                    } else {
+                        lightboxVideo.pause();
+                        lightboxVideo.src = '';
+                        lightboxVideo.style.display = 'none';
+                        lightboxImg.style.display = 'block';
+                        lightboxImg.src = item.src;
+                        lightbox.classList.remove('show-video');
+                    }
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    updateCounter();
+                }
+
+                function close() {
+                    lightboxVideo.pause();
+                    lightboxVideo.src = '';
+                    lightbox.classList.remove('active');
+                    lightbox.classList.remove('show-video');
+                    lightboxImg.style.display = 'block';
+                    document.body.style.overflow = '';
+                }
+
+                function nav(dir) {
+                    lightboxVideo.pause();
+                    current = (current + dir + mediaItems.length) % mediaItems.length;
+                    const item = mediaItems[current];
+                    if (item.type === 'video') {
+                        lightboxImg.style.display = 'none';
+                        lightboxVideo.style.display = 'block';
+                        lightboxVideo.src = item.src;
+                        lightboxVideo.load();
+                        lightboxVideo.play();
+                        lightbox.classList.add('show-video');
+                    } else {
+                        lightboxVideo.pause();
+                        lightboxVideo.src = '';
+                        lightboxVideo.style.display = 'none';
+                        lightboxImg.style.display = 'block';
+                        lightboxImg.src = item.src;
+                        lightbox.classList.remove('show-video');
+                    }
+                    updateCounter();
+                }
+
+                function updateCounter() { const el = document.getElementById('lightboxCounter'); if (el) el.textContent = (current + 1) + ' / ' + mediaItems.length; }
+                galleryItems.forEach((item, i) => item.addEventListener('click', () => open(i)));
+                document.getElementById('lightboxClose').addEventListener('click', close);
+                document.getElementById('lightboxPrev').addEventListener('click', () => nav(-1));
+                document.getElementById('lightboxNext').addEventListener('click', () => nav(1));
+                lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+                document.addEventListener('keydown', (e) => { if (!lightbox.classList.contains('active')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') nav(-1); if (e.key === 'ArrowRight') nav(1); });
+            }
+        })();
+    </script>
+</body>
+</html>

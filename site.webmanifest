@@ -1,0 +1,21 @@
+{
+  "name": "Trotoar Coffee",
+  "short_name": "Trotoar",
+  "description": "Kopi dan Curhat - Tempat singgah untuk menikmati kopi, cerita, dan malam yang berjalan pelan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#6B4F3A",
+  "icons": [
+    {
+      "src": "/assets/images/Logo_Trotoar.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/Logo_Trotoar.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

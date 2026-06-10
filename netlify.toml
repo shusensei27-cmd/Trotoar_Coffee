@@ -1,0 +1,50 @@
+[build]
+  publish = "."
+  command = "echo 'Static site - no build required'"
+
+[[redirects]]
+  from = "/menu"
+  to = "/pages/menu.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery"
+  to = "/pages/gallery.html"
+  status = 200
+
+[[redirects]]
+  from = "/curhat"
+  to = "/pages/curhat.html"
+  status = 200
+
+[[redirects]]
+  from = "/event"
+  to = "/pages/event.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/pages/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/pages/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/reservation"
+  to = "/pages/reservation.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

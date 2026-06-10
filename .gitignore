@@ -1,0 +1,13 @@
+# System files
+Thumbs.db
+.DS_Store
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Temp Python files
+*.pyc
+__pycache__/

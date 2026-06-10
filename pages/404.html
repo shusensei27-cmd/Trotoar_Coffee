@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Trotoar Coffee</title>
+    <meta name="description" content="Halaman tidak ditemukan - Trotoar Coffee">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://trotoarcoffee.netlify.app/pages/404.html">
+    <meta property="og:title" content="404 | Trotoar Coffee">
+    <meta property="og:description" content="Halaman tidak ditemukan">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trotoarcoffee.netlify.app/pages/404.html">
+    <meta property="og:image" content="https://trotoarcoffee.netlify.app/assets/images/Logo_Trotoar.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="404 | Trotoar Coffee">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <style>
+        .page-404 {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 24px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-404::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(107,79,58,0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .page-404-content {
+            position: relative;
+            z-index: 1;
+            max-width: 500px;
+        }
+        .page-404-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+            display: block;
+            opacity: 0.5;
+        }
+        .page-404-code {
+            font-family: var(--font-heading);
+            font-size: clamp(5rem, 12vw, 8rem);
+            color: var(--coffee-brown);
+            line-height: 1;
+            opacity: 0.3;
+            margin-bottom: 8px;
+        }
+        .page-404-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-style: italic;
+            color: var(--ivory-white);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .page-404-text {
+            font-size: 0.9rem;
+            color: var(--retro-gray);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .page-404-decoration {
+            width: 40px;
+            height: 1.5px;
+            background-color: var(--coffee-brown);
+            margin: 0 auto 24px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <nav class="navbar" id="pageNavbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-logo">
+                <img src="../assets/images/Logo_Trotoar.png" alt="Trotoar Coffee" class="logo-img">
+                <span class="logo-text">Trotoar Coffee</span>
+            </a>
+            <button class="hamburger" id="pageHamburger">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="../index.html" class="navbar-link">Home</a></li>
+                <li><a href="about.html" class="navbar-link">Tentang</a></li>
+                <li><a href="menu.html" class="navbar-link">Menu</a></li>
+                <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+                <li><a href="curhat.html" class="navbar-link">Curhat</a></li>
+                <li><a href="event.html" class="navbar-link">Event</a></li>
+                <li><a href="contact.html" class="navbar-link">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mobile-overlay" id="pageMobileOverlay">
+        <ul class="mobile-menu">
+            <li><a href="../index.html" class="mobile-link" data-close>Home</a></li>
+            <li><a href="about.html" class="mobile-link" data-close>Tentang</a></li>
+            <li><a href="menu.html" class="mobile-link" data-close>Menu</a></li>
+            <li><a href="gallery.html" class="mobile-link" data-close>Gallery</a></li>
+            <li><a href="curhat.html" class="mobile-link" data-close>Curhat</a></li>
+            <li><a href="event.html" class="mobile-link" data-close>Event</a></li>
+            <li><a href="contact.html" class="mobile-link" data-close>Kontak</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="page-404">
+            <div class="page-404-content reveal-fade-up">
+                <span class="page-404-icon">☕</span>
+                <div class="page-404-code">404</div>
+                <div class="page-404-decoration"></div>
+                <h1 class="page-404-title">Sepertinya kamu tersesat di trotoar yang salah.</h1>
+                <p class="page-404-text">Halaman yang kamu cari tidak ditemukan. Mungkin sudah dipindahkan, atau mungkin memang tidak pernah ada. Seperti beberapa cerita yang hilang di malam hari.</p>
+                <a href="../index.html" class="btn btn-primary">Kembali ke Home</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animation.js"></script>
+</body>
+</html>

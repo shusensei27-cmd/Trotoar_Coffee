@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trotoar Coffee | Kopi dan Curhat</title>
+    <meta name="description" content="Trotoar Coffee adalah tempat menikmati kopi, berbagi cerita, dan menemukan teman untuk berbincang dalam suasana hangat dan nyaman. Kopi dan curhat.">
+    <meta name="keywords" content="trotoar coffee, kopi dan curhat, coffee shop, cafe, kopi, curhat online, tempat nongkrong, trotoar coffee indonesia, garasi trotoar coffee">
+    <meta name="author" content="Muhammad Yudho Arga Wibowo, S.Pd.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://trotoarcoffee.netlify.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Trotoar Coffee | Kopi dan Curhat">
+    <meta property="og:description" content="Trotoar Coffee adalah tempat menikmati kopi, berbagi cerita, dan menemukan teman untuk berbincang dalam suasana hangat dan nyaman.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trotoarcoffee.netlify.app/">
+    <meta property="og:image" content="https://trotoarcoffee.netlify.app/assets/images/Logo_Trotoar.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Trotoar Coffee">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trotoar Coffee | Kopi dan Curhat">
+    <meta name="twitter:description" content="Trotoar Coffee adalah tempat menikmati kopi, berbagi cerita, dan menemukan teman untuk berbincang dalam suasana hangat dan nyaman.">
+    <meta name="twitter:image" content="https://trotoarcoffee.netlify.app/assets/images/Logo_Trotoar.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#6B4F3A">
+    <meta name="theme-color" content="#6B4F3A">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Trotoar Coffee",
+      "alternateName": "Garasi Trotoar Coffee",
+      "description": "Tempat menikmati kopi, berbagi cerita, dan menemukan teman untuk berbincang dalam suasana hangat dan nyaman.",
+      "url": "https://trotoarcoffee.netlify.app",
+      "telephone": "0896-5544-4469",
+      "email": "trotoar_coffe_@email.com",
+      "logo": "https://trotoarcoffee.netlify.app/assets/images/Logo_Trotoar.png",
+      "image": "https://trotoarcoffee.netlify.app/assets/images/Poster_background_Trotoar.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Mayor Sukardi Hamdani / Jl. Palapa 5C No. 75, Labuhan Ratu",
+        "addressLocality": "Kedaton",
+        "addressRegion": "Bandar Lampung",
+        "postalCode": "35142",
+        "addressCountry": "ID"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "18:30", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "17:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "17:00", "closes": "02:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "17:00", "closes": "00:00" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/trotoar_coffe_"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-steam">
+            <span class="steam-dot"></span>
+            <span class="steam-dot"></span>
+            <span class="steam-dot"></span>
+        </div>
+        <img src="assets/images/Logo_Trotoar.png" alt="Trotoar Coffee" class="loading-logo">
+        <span class="loading-text">Memuat...</span>
+    </div>
+
+    <!-- Page Transition -->
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+    <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" id="progressBar" aria-hidden="true">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+    </div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="pageNavbar" role="navigation" aria-label="Navigasi utama">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo" aria-label="Trotoar Coffee - kembali ke atas">
+                <img src="assets/images/Logo_Trotoar.png" alt="Trotoar Coffee" class="logo-img">
+                <span class="logo-text">Trotoar Coffee</span>
+            </a>
+            <button class="hamburger" id="pageHamburger" aria-label="Buka menu navigasi" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="navbar-menu" role="menubar">
+                <li role="none"><a href="index.html" class="navbar-link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="pages/about.html" class="navbar-link" role="menuitem">Tentang</a></li>
+                <li role="none"><a href="pages/menu.html" class="navbar-link" role="menuitem">Menu</a></li>
+                <li role="none"><a href="pages/gallery.html" class="navbar-link" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="pages/curhat.html" class="navbar-link" role="menuitem">Curhat</a></li>
+                <li role="none"><a href="pages/event.html" class="navbar-link" role="menuitem">Event</a></li>
+                <li role="none"><a href="pages/contact.html" class="navbar-link" role="menuitem">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="pageMobileOverlay" aria-hidden="true">
+        <ul class="mobile-menu">
+            <li><a href="index.html" class="mobile-link" data-close>Home</a></li>
+            <li><a href="pages/about.html" class="mobile-link" data-close>Tentang</a></li>
+            <li><a href="pages/menu.html" class="mobile-link" data-close>Menu</a></li>
+            <li><a href="pages/gallery.html" class="mobile-link" data-close>Gallery</a></li>
+            <li><a href="pages/curhat.html" class="mobile-link" data-close>Curhat</a></li>
+            <li><a href="pages/event.html" class="mobile-link" data-close>Event</a></li>
+            <li><a href="pages/contact.html" class="mobile-link" data-close>Kontak</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-label="Hero section">
+            <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+            <div class="hero-blur-bottom" aria-hidden="true"></div>
+            <div class="hero-overlay" id="heroOverlay" aria-hidden="true"></div>
+            <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+            <div class="hero-content">
+                <img src="assets/images/Logo_Trotoar.png" alt="Trotoar Coffee" class="hero-logo-img">
+                <div class="hero-divider" aria-hidden="true"></div>
+                <h1 class="hero-title" id="heroTitle">TROTOAR COFFEE</h1>
+                <p class="hero-subtitle" id="heroSubtitle"></p>
+                <div class="hero-divider-bottom" aria-hidden="true"></div>
+                <p class="hero-desc">
+                    Tempat singgah untuk menikmati kopi, cerita, dan malam yang berjalan pelan.
+                </p>
+                <div class="hero-buttons">
+                    <a href="pages/menu.html" class="btn btn-primary" data-magnetic>Explore Menu</a>
+                    <a href="pages/contact.html" class="btn btn-outline" data-magnetic>Kontak</a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span class="scroll-arrow"></span>
+                <span class="scroll-text">scroll</span>
+            </div>
+        </section>
+
+        <!-- Daily Quote -->
+        <section class="daily-quote-section">
+            <div class="container">
+                <div class="daily-quote-content">
+                    <span class="daily-quote-mark" aria-hidden="true">❝</span>
+                    <p class="daily-quote-text" id="dailyQuote"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Singkat -->
+        <section class="tentang section-padding" id="tentang" aria-label="Tentang Kami">
+            <div class="container">
+                <div class="tentang-grid">
+                    <div class="tentang-image-wrapper reveal-fade-up">
+                        <div class="tentang-image">
+                            <img src="assets/images/Cerita_di_Balik_Trotoar.png" alt="Cerita di Balik Trotoar Coffee" class="tentang-img">
+                        </div>
+                    </div>
+                    <div class="tentang-text reveal-fade-up">
+                        <span class="section-tag">Tentang Kami</span>
+                        <h2 class="section-heading">Cerita di Balik Trotoar</h2>
+                        <div class="decorative-line" aria-hidden="true"></div>
+                        <p class="tentang-paragraph">
+                            Trotoar Coffee lahir dari kebiasaan sederhana:<br>
+                            duduk, ngobrol, dan menikmati kopi tanpa buru-buru.
+                        </p>
+                        <p class="tentang-paragraph">
+                            Kami percaya secangkir kopi kadang lebih jujur daripada percakapan formal.
+                        </p>
+                        <blockquote class="tentang-quote">
+                            "Kami percaya secangkir kopi kadang lebih jujur daripada percakapan formal."
+                        </blockquote>
+                        <a href="pages/about.html" class="btn btn-outline" style="margin-top:20px;">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Kata Owner -->
+        <section class="owner-section section-padding" id="kata-owner" aria-label="Kata Owner">
+            <div class="container">
+                <div class="owner-content reveal-fade-up">
+                    <div class="owner-photo-frame">
+                        <img src="assets/images/Foto_Owner_Trotoar.png" alt="Muhammad Yudho Arga Wibowo, S.Pd. - Owner Trotoar Coffee" class="owner-photo-img">
+                    </div>
+                    <span class="owner-label">— Kata Owner —</span>
+                    <div class="owner-quote-icon" aria-hidden="true">❝</div>
+                    <p class="owner-quote">
+                        Trotoar Coffee bukan sekadar tempat minum kopi.<br>
+                        Ini adalah ruang untuk pulang, untuk berhenti sejenak,<br>
+                        dan untuk merasa bahwa kamu tidak sendiri.
+                    </p>
+                    <div class="owner-name">Muhammad Yudho Arga Wibowo, S.Pd.</div>
+                    <div class="owner-title">Founder Trotoar Coffee</div>
+                    <div class="owner-signature-line" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Menu Preview -->
+        <section class="menu-section section-padding" id="menu" aria-label="Signature Menu">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag">Signature Menu</span>
+                    <h2 class="section-heading">Pilihan Spesial Kami</h2>
+                    <div class="decorative-line center" aria-hidden="true"></div>
+                </div>
+                <div class="menu-grid">
+                    <a href="pages/menu.html" class="menu-card reveal-fade-up" tabindex="0">
+                        <div class="menu-card-image">
+                            <img src="assets/images_menu/Oreo_Coffee_Latte.jpeg" alt="Oreo Coffee Latte" loading="lazy">
+                            <div class="menu-card-overlay" aria-hidden="true"></div>
+                        </div>
+                        <div class="menu-card-body">
+                            <h3 class="menu-card-title">Oreo Coffee Latte</h3>
+                            <p class="menu-card-desc">Perpaduan espresso, susu segar, dan crushed oreo.</p>
+                            <span class="menu-card-price">Rp 12.000</span>
+                        </div>
+                    </a>
+                    <a href="pages/menu.html" class="menu-card reveal-fade-up" tabindex="0">
+                        <div class="menu-card-image">
+                            <img src="assets/images_menu/Ice_Dolce_Latte.jpeg" alt="Ice Dolce Latte" loading="lazy">
+                            <div class="menu-card-overlay" aria-hidden="true"></div>
+                        </div>
+                        <div class="menu-card-body">
+                            <h3 class="menu-card-title">Ice Dolce Latte</h3>
+                            <p class="menu-card-desc">Perpaduan espresso, susu segar, dan sirup dolce.</p>
+                            <span class="menu-card-price">Rp 12.000</span>
+                        </div>
+                    </a>
+                    <a href="pages/menu.html" class="menu-card reveal-fade-up" tabindex="0">
+                        <div class="menu-card-image">
+                            <img src="assets/images_menu/Japanese.jpeg" alt="V60 Japanese" loading="lazy">
+                            <div class="menu-card-overlay" aria-hidden="true"></div>
+                        </div>
+                        <div class="menu-card-body">
+                            <h3 class="menu-card-title">V60 / Japanese</h3>
+                            <p class="menu-card-desc">Manual brew dengan biji kopi pilihan, single origin.</p>
+                            <span class="menu-card-price">Rp 13.000</span>
+                        </div>
+                    </a>
+                    <a href="pages/menu.html" class="menu-card reveal-fade-up" tabindex="0">
+                        <div class="menu-card-image">
+                            <img src="assets/images_menu/Matcha_Trotoar.jpeg" alt="Matcha Trotoar" loading="lazy">
+                            <div class="menu-card-overlay" aria-hidden="true"></div>
+                        </div>
+                        <div class="menu-card-body">
+                            <h3 class="menu-card-title">Matcha Trotoar</h3>
+                            <p class="menu-card-desc">Matcha premium dengan susu segar, creamy dan autentik.</p>
+                            <span class="menu-card-price">Rp 12.000</span>
+                        </div>
+                    </a>
+                </div>
+                <div style="text-align:center;margin-top:36px;">
+                    <a href="pages/menu.html" class="btn btn-outline" data-magnetic>Lihat Semua Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Preview -->
+        <section class="gallery-section section-padding" id="gallery" aria-label="Gallery">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag">Gallery</span>
+                    <h2 class="section-heading">Suasana Trotoar</h2>
+                    <div class="decorative-line center" aria-hidden="true"></div>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal-fade-up" data-gallery>
+                        <img src="assets/images/ig_gallery_3.png" alt="Momen Trotoar Coffee" loading="lazy">
+                        <div class="gallery-item-overlay" aria-hidden="true"><span class="gallery-icon">+</span></div>
+                    </div>
+                    <div class="gallery-item reveal-fade-up" data-gallery>
+                        <img src="assets/images/ig_gallery_2.png" alt="Momen Trotoar Coffee" loading="lazy">
+                        <div class="gallery-item-overlay" aria-hidden="true"><span class="gallery-icon">+</span></div>
+                    </div>
+                    <div class="gallery-item reveal-fade-up" data-gallery>
+                        <img src="assets/images/ig_gallery_1.jpg" alt="Instagram post Trotoar Coffee" loading="lazy">
+                        <div class="gallery-item-overlay" aria-hidden="true"><span class="gallery-icon">+</span></div>
+                    </div>
+                    <div class="gallery-item wide reveal-fade-up" data-gallery data-video>
+                        <video src="assets/videos/ig_gallery_video_1.mp4" preload="metadata" muted playsinline></video>
+                        <div class="gallery-item-overlay" aria-hidden="true"><span class="gallery-icon gallery-icon-play">&#9654;</span></div>
+                    </div>
+                    <div class="gallery-item reveal-fade-up" data-gallery data-video>
+                        <video src="assets/videos/ig_gallery_video_2.mp4" preload="metadata" muted playsinline></video>
+                        <div class="gallery-item-overlay" aria-hidden="true"><span class="gallery-icon gallery-icon-play">&#9654;</span></div>
+                    </div>
+                </div>
+                <div style="text-align:center;margin-top:36px;">
+                    <a href="pages/gallery.html" class="btn btn-outline" data-magnetic>Lihat Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Lightbox -->
+        <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery lightbox">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Tutup">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Sebelumnya">&#8249;</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Gallery expanded">
+            <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Selanjutnya">&#8250;</button>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+
+        <!-- Curhat Hari Ini Preview -->
+        <section class="curhat-section section-padding" id="curhat" aria-label="Curhat Hari Ini">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag">Curhat Hari Ini</span>
+                    <h2 class="section-heading">Pesan Singgah</h2>
+                    <div class="decorative-line center" aria-hidden="true"></div>
+                    <p class="section-subtext">Catatan anonim dari pengunjung Trotoar</p>
+                </div>
+                <div class="sticky-notes-board reveal-fade-up" id="stickyBoard">
+                    <div class="sticky-note" aria-label="Catatan pengunjung">
+                        <span class="sticky-pin" aria-hidden="true"></span>
+                        <p>"hari ini cape banget."</p>
+                    </div>
+                    <div class="sticky-note" aria-label="Catatan pengunjung">
+                        <span class="sticky-pin" aria-hidden="true"></span>
+                        <p>"ternyata pulang ga selalu tentang rumah."</p>
+                    </div>
+                    <div class="sticky-note" aria-label="Catatan pengunjung">
+                        <span class="sticky-pin" aria-hidden="true"></span>
+                        <p>"aku cuma butuh ditemenin kopi."</p>
+                    </div>
+                    <div class="sticky-note" aria-label="Catatan pengunjung">
+                        <span class="sticky-pin" aria-hidden="true"></span>
+                        <p>"hujan di luar, tenang di dalam."</p>
+                    </div>
+                </div>
+                <div style="text-align:center;margin-top:36px;">
+                    <a href="pages/curhat.html" class="btn btn-outline" data-magnetic>Kirim Curhatan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acara Trotoar -->
+        <section class="event-preview-section section-padding" id="event" aria-label="Event">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag">Event</span>
+                    <h2 class="section-heading">Acara Trotoar</h2>
+                    <div class="decorative-line center" aria-hidden="true"></div>
+                </div>
+                <div class="event-preview-grid">
+                    <article class="event-preview-card reveal-fade-up">
+                        <div class="event-preview-date">
+                            <span class="event-preview-day">—</span>
+                            <span class="event-preview-month">—</span>
+                        </div>
+                        <div class="event-preview-body">
+                            <h3>Coming Soon</h3>
+                            <p>Belum ada acara yang dijadwalkan. Nantikan informasi selanjutnya.</p>
+                            <span class="event-preview-time">—</span>
+                        </div>
+                    </article>
+                    <article class="event-preview-card reveal-fade-up">
+                        <div class="event-preview-date">
+                            <span class="event-preview-day">—</span>
+                            <span class="event-preview-month">—</span>
+                        </div>
+                        <div class="event-preview-body">
+                            <h3>Coming Soon</h3>
+                            <p>Belum ada acara yang dijadwalkan. Nantikan informasi selanjutnya.</p>
+                            <span class="event-preview-time">—</span>
+                        </div>
+                    </article>
+                    <article class="event-preview-card reveal-fade-up">
+                        <div class="event-preview-date">
+                            <span class="event-preview-day">—</span>
+                            <span class="event-preview-month">—</span>
+                        </div>
+                        <div class="event-preview-body">
+                            <h3>Coming Soon</h3>
+                            <p>Belum ada acara yang dijadwalkan. Nantikan informasi selanjutnya.</p>
+                            <span class="event-preview-time">—</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimoni -->
+        <section class="testimoni-section section-padding" id="testimoni" aria-label="Testimoni">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag">Testimoni</span>
+                    <h2 class="section-heading">Yang Mereka Katakan</h2>
+                    <div class="decorative-line center" aria-hidden="true"></div>
+                </div>
+                <div class="testimoni-grid reveal-fade-up">
+                    <blockquote class="testimoni-card">
+                        <span class="testimoni-mark" aria-hidden="true">❝</span>
+                        <p class="testimoni-text">"Tempatnya nyaman dan Bringass btoll, bisa ngopi sambil curhat tentang segala masalah yang ada."</p>
+                        <cite class="testimoni-author">— Okta, Orang Bringas</cite>
+                    </blockquote>
+                    <blockquote class="testimoni-card">
+                        <span class="testimoni-mark" aria-hidden="true">❝</span>
+                        <p class="testimoni-text">"Bisa merasakan kopi sambil bertukar pikiran dan juga diskusi, "Menuangkan pikiran dalam secangkir kopi" Yeaahhh."</p>
+                        <cite class="testimoni-author">— Nugi, Anggota Trotoar</cite>
+                    </blockquote>
+                    <blockquote class="testimoni-card">
+                        <span class="testimoni-mark" aria-hidden="true">❝</span>
+                        <p class="testimoni-text">"Kita bisa belajar kopi dengan ownernya  langsung, anjirr pokoknya seru benerr"</p>
+                        <cite class="testimoni-author">— Asep, Anggota Trotoar</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Preview -->
+        <section class="instagram-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag">Instagram</span>
+                    <h2 class="section-heading">@trotoar_coffe_</h2>
+                    <div class="decorative-line center" aria-hidden="true"></div>
+                </div>
+                <div class="instagram-grid reveal-fade-up">
+                    <a href="https://www.instagram.com/p/DT0Ywl3Ejj_/?igsh=NGszdXVneGU5bWsw" target="_blank" class="instagram-item" rel="noopener" aria-label="Instagram post">
+                        <img src="assets/images/ig_1.jpg" alt="Instagram post by trotoar_coffe_" loading="lazy">
+                        <span class="instagram-overlay">&#10064;</span>
+                    </a>
+                    <a href="https://www.instagram.com/reel/DTdToxkkjaH/?igsh=MTE0NnBsa28ycTdpbw==" target="_blank" class="instagram-item" rel="noopener" aria-label="Instagram reel">
+                        <img src="assets/images/ig_2.jpg" alt="Instagram reel by trotoar_coffe_" loading="lazy">
+                        <span class="instagram-overlay">&#10064;</span>
+                    </a>
+                    <a href="https://www.instagram.com/p/DS0N6QYkljx/?igsh=MXYwYjVnMXB4bmp3eA==" target="_blank" class="instagram-item" rel="noopener" aria-label="Instagram post">
+                        <img src="assets/images/ig_3.jpg" alt="Instagram post by trotoar_coffe_" loading="lazy">
+                        <span class="instagram-overlay">&#10064;</span>
+                    </a>
+                    <a href="https://www.instagram.com/reel/DOvQniqEnkl/?igsh=MTBjeXF3b2UzYnNlaA==" target="_blank" class="instagram-item" rel="noopener" aria-label="Instagram reel">
+                        <img src="assets/images/ig_4.jpg" alt="Instagram reel by trotoar_coffe_" loading="lazy">
+                        <span class="instagram-overlay">&#10064;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lokasi & Jam Buka -->
+        <section class="lokasi-section section-padding" id="lokasi" aria-label="Lokasi dan Jam Buka">
+            <div class="container">
+                <div class="lokasi-grid">
+                    <div class="lokasi-info reveal-fade-up" id="kontak">
+                        <span class="section-tag">Lokasi & Kontak</span>
+                        <h2 class="section-heading">Temukan Kami</h2>
+                        <div class="decorative-line" aria-hidden="true"></div>
+                        <div class="open-status-bar">
+                            <span class="open-status-dot" id="openStatus">Buka</span>
+                            <span class="open-status-time" id="currentTime"></span>
+                        </div>
+                        <ul class="info-list">
+                            <li class="info-item">
+                                <span class="info-icon" aria-hidden="true">📍</span>
+                                <div><strong>Alamat</strong><p>Jl. Mayor Sukardi Hamdani / Jl. Palapa 5C No. 75, Labuhan Ratu, Kec. Kedaton, Kota Bandar Lampung, Lampung 35142</p></div>
+                            </li>
+                            <li class="info-item">
+                                <span class="info-icon" aria-hidden="true">🕐</span>
+                                <div><strong>Jam Buka</strong><p>Senin – Kamis: 18.30 – 00.00<br>Jum'at: 17.00 – 00.00<br>Sabtu: 17.00 – 02.00<br>Minggu: 17.00 – 00.00</p></div>
+                            </li>
+                            <li class="info-item">
+                                <span class="info-icon" aria-hidden="true">📞</span>
+                                <div><strong>Kontak</strong><p>0896-5544-4469</p></div>
+                            </li>
+                            <li class="info-item">
+                                <span class="info-icon" aria-hidden="true">📷</span>
+                                <div><strong>Instagram</strong><p>@trotoar_coffe</p></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lokasi-map reveal-fade-up" aria-label="Peta lokasi">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972!2d105.26!3d-5.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dbeb92d732d7%3A0xe45ba556c76e5533!2sGarasi+Trotoar+Coffee!5e0!3m2!1sid!2sid" width="100%" height="100%" style="border:0;min-height:300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Garasi Trotoar Coffee"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <svg class="back-to-top-svg" viewBox="0 0 48 48" width="48" height="48">
+            <circle class="back-to-top-track" cx="24" cy="24" r="21" fill="none" stroke="rgba(122,122,122,0.2)" stroke-width="2"/>
+            <circle class="back-to-top-fill" id="backToTopFill" cx="24" cy="24" r="21" fill="none" stroke="#9B7B65" stroke-width="2" stroke-linecap="round" transform="rotate(-90 24 24)" stroke-dasharray="131.95" stroke-dashoffset="131.95"/>
+        </svg>
+        <span class="back-to-top-arrow">&#8593;</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/Logo_Trotoar.png" alt="Trotoar Coffee" class="footer-logo-img">
+                    <h3 class="footer-name">Trotoar Coffee</h3>
+                    <p class="footer-slogan">kopi dan curhat</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="pages/about.html" class="footer-link">Tentang</a>
+                    <a href="pages/menu.html" class="footer-link">Menu</a>
+                    <a href="pages/gallery.html" class="footer-link">Gallery</a>
+                    <a href="pages/curhat.html" class="footer-link">Curhat</a>
+                    <a href="pages/event.html" class="footer-link">Event</a>
+                    <a href="pages/contact.html" class="footer-link">Kontak</a>
+                </div>
+                <div class="footer-divider" aria-hidden="true"></div>
+                <div class="footer-info">
+                    <p class="footer-owner">Owner: <strong>Muhammad Yudho Arga Wibowo, S.Pd.</strong></p>
+                    <p class="footer-copy">&copy; 2026 Trotoar Coffee. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
