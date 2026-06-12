@@ -75,6 +75,17 @@
             </div>
         </section>
 
+        <!-- Sub Page Navigation -->
+        <div class="page-subnav">
+            <div class="container">
+                <button class="page-subnav-btn active" data-page="menu">Daftar Menu</button>
+                <button class="page-subnav-btn" data-page="event">Event Engagement</button>
+            </div>
+        </div>
+
+        <!-- Daftar Menu Content -->
+        <div class="page-content" data-page-content="menu">
+
         <!-- Menu Posters Grid -->
         <section class="menu-preview-section">
             <div class="container">
@@ -278,7 +289,75 @@
             </div>
         </section>
 
-        <!-- Pesan Online (Clickable Posters) -->
+        </div>
+        <!-- End Daftar Menu Content -->
+
+        <!-- Event Engagement Content -->
+        <div class="page-content page-content-hidden" data-page-content="event">
+
+        <section class="event-engagement-section section-padding">
+            <div class="container">
+                <div class="engagement-cover" id="engagementCover">
+                    <div class="engagement-cover-inner">
+                        <span class="engagement-cover-tag">Event Engagement</span>
+                        <h2 class="engagement-cover-title">TROTOAR<br>WEDDING COFFEE</h2>
+                        <div class="decorative-line center" aria-hidden="true"></div>
+                        <p class="engagement-cover-motto">"Setiap Moment Layak Di Rayakan<br>Dengan Secangkir Kopi"</p>
+                        <span class="engagement-cover-click">Klik untuk info lengkap &#8595;</span>
+                    </div>
+                </div>
+
+                <div class="engagement-detail" id="engagementDetail">
+                    <div class="engagement-detail-header">
+                        <h2>TROTOAR WEDDING COFFEE</h2>
+                        <span class="engagement-detail-sub">oleh TROTOAR COFFEE</span>
+                    </div>
+
+                    <div class="engagement-info-grid">
+                        <div class="engagement-info-card">
+                            <span class="engagement-info-icon">&#9992;</span>
+                            <h3>Jenis Acara</h3>
+                            <p>Wedding (Pernikahan)<br>Event (Acara Umum)<br>Engagement (Pertunangan)</p>
+                        </div>
+                        <div class="engagement-info-card">
+                            <span class="engagement-info-icon">&#9733;</span>
+                            <h3>Harga Paket</h3>
+                            <p class="engagement-price">Mulai dari <strong>Rp 500.000</strong></p>
+                        </div>
+                        <div class="engagement-info-card">
+                            <span class="engagement-info-icon">&#9742;</span>
+                            <h3>Kontak</h3>
+                            <p>WA: <a href="https://wa.me/6289655444469" target="_blank">0896-5544-4469</a><br>CP: Muhammad Yudho Arga Wibowo, S.Pd.</p>
+                        </div>
+                    </div>
+
+                    <div class="engagement-detail-paket">
+                        <h3>Detail Paket</h3>
+                        <ul>
+                            <li><strong>50 Cup</strong> per paket</li>
+                            <li>Menu dapat <strong>disesuaikan</strong> (Menyesuaikan Menu)</li>
+                        </ul>
+                    </div>
+
+                    <div class="engagement-detail-fasilitas">
+                        <h3>Fasilitas</h3>
+                        <ul>
+                            <li>&#10003; Display Booth</li>
+                            <li>&#10003; Include Barista</li>
+                        </ul>
+                    </div>
+
+                    <div class="engagement-detail-cta">
+                        <p>INFO LEBIH LANJUT</p>
+                        <p class="engagement-detail-cta-sub">Untuk detail lebih lanjut, hubungi kontak di atas</p>
+                        <a href="https://wa.me/6289655444469?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20paket%20Trotoar%20Wedding%20Coffee.%20Bisa%20minta%20info%20lebih%20lanjut%3F" target="_blank" class="btn btn-primary" data-ripple>Hubungi via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div>
+        <!-- End Event Engagement Content -->
         <section class="menu-order-section section-padding">
             <div class="container">
                 <div class="section-header reveal-fade-up">
@@ -374,5 +453,40 @@
 
     <script src="../js/navbar.js"></script>
     <script src="../js/animation.js"></script>
+    <script>
+        (function() {
+            // Sub-page navigation
+            const subnavBtns = document.querySelectorAll('.page-subnav-btn');
+            const pages = document.querySelectorAll('[data-page-content]');
+
+            subnavBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var target = this.dataset.page;
+                    subnavBtns.forEach(function(b) { b.classList.remove('active'); });
+                    this.classList.add('active');
+                    pages.forEach(function(p) {
+                        if (p.dataset.pageContent === target) {
+                            p.classList.remove('page-content-hidden');
+                        } else {
+                            p.classList.add('page-content-hidden');
+                        }
+                    });
+                });
+            });
+
+            // Engagement cover click to reveal details
+            var cover = document.getElementById('engagementCover');
+            var detail = document.getElementById('engagementDetail');
+            if (cover && detail) {
+                cover.addEventListener('click', function() {
+                    this.classList.add('engagement-cover-revealed');
+                    detail.classList.add('engagement-detail-visible');
+                    setTimeout(function() {
+                        detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 400);
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
