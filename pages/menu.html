@@ -308,6 +308,7 @@
                 </div>
 
                 <div class="engagement-detail" id="engagementDetail">
+                    <button class="engagement-detail-close" id="engagementClose" aria-label="Tutup">&times;</button>
                     <div class="engagement-detail-header">
                         <h2>TROTOAR WEDDING COFFEE</h2>
                         <span class="engagement-detail-sub">oleh TROTOAR COFFEE</span>
@@ -474,17 +475,26 @@
                 });
             });
 
-            // Engagement cover click to reveal details
+            // Engagement cover toggle detail
             var cover = document.getElementById('engagementCover');
             var detail = document.getElementById('engagementDetail');
-            if (cover && detail) {
-                cover.addEventListener('click', function() {
-                    this.classList.add('engagement-cover-revealed');
+            var closeBtn = document.getElementById('engagementClose');
+            function toggleEngagement(show) {
+                if (show) {
+                    cover.classList.add('engagement-cover-revealed');
                     detail.classList.add('engagement-detail-visible');
                     setTimeout(function() {
                         detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, 400);
-                });
+                } else {
+                    cover.classList.remove('engagement-cover-revealed');
+                    detail.classList.remove('engagement-detail-visible');
+                    document.querySelector('[data-page-content="event"]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+            if (cover && detail) {
+                cover.addEventListener('click', function() { toggleEngagement(true); });
+                if (closeBtn) closeBtn.addEventListener('click', function() { toggleEngagement(false); });
             }
         })();
     </script>

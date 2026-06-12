@@ -1567,6 +1567,31 @@
     max-width: 640px;
     margin: 0 auto;
     display: none;
+    position: relative;
+}
+.engagement-detail-close {
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(122,122,122,0.3);
+    background-color: #1a1a1a;
+    color: var(--ivory-white);
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-smooth);
+    z-index: 5;
+    line-height: 1;
+}
+.engagement-detail-close:hover {
+    border-color: var(--milk-brown);
+    background-color: #2a2018;
+    color: var(--milk-brown);
 }
 .engagement-detail-visible {
     display: block;
