@@ -127,8 +127,7 @@
                 var dd = this.parentElement.querySelector('.mobile-dropdown');
                 if (dd) {
                     dd.classList.toggle('open');
-                    var arrow = this.querySelector('.navbar-link-arrow');
-                    if (arrow) arrow.classList.toggle('rotated');
+                    this.classList.toggle('open');
                 }
             });
         });
