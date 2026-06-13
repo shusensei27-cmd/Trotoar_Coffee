@@ -316,19 +316,6 @@ ul {
 .nav-item {
     position: relative;
 }
-.nav-item > .navbar-link::after {
-    content: '▾';
-    display: inline-block;
-    margin-left: 3px;
-    font-size: 0.5rem;
-    transition: transform var(--transition-smooth);
-    line-height: 1;
-    vertical-align: middle;
-}
-.nav-item:hover > .navbar-link::after,
-.nav-item:focus-within > .navbar-link::after {
-    transform: rotate(180deg);
-}
 .nav-item:hover .nav-dropdown,
 .nav-item:focus-within .nav-dropdown {
     opacity: 1;
@@ -466,18 +453,6 @@ ul {
 
 .mobile-link:hover {
     color: var(--milk-brown);
-}
-.mobile-item > .mobile-link::after {
-    content: '▾';
-    display: inline-block;
-    margin-left: 4px;
-    font-size: 0.7rem;
-    transition: transform var(--transition-smooth);
-    line-height: 1;
-    vertical-align: middle;
-}
-.mobile-item > .mobile-link.open::after {
-    transform: rotate(180deg);
 }
 
 /* Mobile dropdown submenu */
