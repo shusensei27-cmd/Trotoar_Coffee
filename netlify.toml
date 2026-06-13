@@ -8,6 +8,21 @@
   status = 200
 
 [[redirects]]
+  from = "/menu/daftar"
+  to = "/pages/menu-content-daftar.html"
+  status = 200
+
+[[redirects]]
+  from = "/menu/engagement"
+  to = "/pages/engagement.html"
+  status = 200
+
+[[redirects]]
+  from = "/engagement"
+  to = "/pages/engagement.html"
+  status = 200
+
+[[redirects]]
   from = "/about"
   to = "/pages/about.html"
   status = 200
