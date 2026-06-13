@@ -119,6 +119,17 @@
         mobileLinks.forEach((link) => {
             link.addEventListener('click', handleSmoothScroll);
         });
+
+        // Mobile dropdown toggle
+        document.querySelectorAll('.mobile-item > .mobile-link').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var dd = this.parentElement.querySelector('.mobile-dropdown');
+                if (dd) {
+                    dd.classList.toggle('open');
+                }
+            });
+        });
     }
 
     function init() {

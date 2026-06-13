@@ -80,6 +80,66 @@
     transition: width var(--transition-smooth);
 }
 
+/* Dropdown submenu */
+.nav-item {
+    position: relative;
+}
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background-color: rgba(17,17,17,0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(122,122,122,0.15);
+    border-radius: 4px;
+    padding: 8px 0;
+    min-width: 160px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-smooth);
+    z-index: 9200;
+    list-style: none;
+}
+.nav-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid rgba(122,122,122,0.15);
+}
+.nav-dropdown-link {
+    display: block;
+    padding: 8px 20px;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ivory-white);
+    white-space: nowrap;
+    transition: color var(--transition-smooth), background-color var(--transition-smooth);
+}
+.nav-dropdown-link:hover {
+    color: var(--milk-brown);
+    background-color: rgba(155,123,101,0.08);
+}
+.nav-dropdown-link.active {
+    color: var(--milk-brown);
+}
+
 .navbar-link:hover,
 .navbar-link:focus-visible,
 .navbar-link.active {
@@ -160,6 +220,32 @@
 }
 
 .mobile-link:hover {
+    color: var(--milk-brown);
+}
+
+/* Mobile dropdown submenu */
+.mobile-item {
+    position: relative;
+}
+.mobile-dropdown {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(122,122,122,0.15);
+}
+.mobile-dropdown.open {
+    display: flex;
+}
+.mobile-dropdown-link {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    color: rgba(245,241,232,0.7);
+    transition: color var(--transition-smooth);
+}
+.mobile-dropdown-link:hover {
     color: var(--milk-brown);
 }
 
