@@ -1481,6 +1481,15 @@
     font-weight: 500;
 }
 
+.menu-loading {
+    text-align: center;
+    padding: 80px 24px;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--retro-gray);
+}
+
 /* ============ PAGE CONTENT TOGGLE ============ */
 .page-content-hidden {
     display: none !important;
