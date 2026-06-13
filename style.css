@@ -316,6 +316,21 @@ ul {
 .nav-item {
     position: relative;
 }
+.nav-item > .navbar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.navbar-link-arrow {
+    display: inline-block;
+    font-size: 0.55rem;
+    transition: transform var(--transition-smooth);
+    line-height: 1;
+}
+.nav-item:hover > .navbar-link .navbar-link-arrow,
+.nav-item:focus-within > .navbar-link .navbar-link-arrow {
+    transform: rotate(180deg);
+}
 .nav-item:hover .nav-dropdown,
 .nav-item:focus-within .nav-dropdown {
     opacity: 1;

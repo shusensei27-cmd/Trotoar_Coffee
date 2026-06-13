@@ -32,6 +32,16 @@
   to = "/pages/contact.html"
   status = 200
 
+[[redirects]]
+  from = "/menu/daftar"
+  to = "/pages/menu.html#daftar"
+  status = 200
+
+[[redirects]]
+  from = "/menu/engagement"
+  to = "/pages/menu.html#engagement"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
