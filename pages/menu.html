@@ -142,6 +142,26 @@
                         container.innerHTML = html;
                         currentTab = tab;
                         tabs.forEach(function(t) { t.classList.toggle('active', t.dataset.tab === tab); });
+                        container.querySelectorAll('.reveal-fade-up').forEach(function(el) { el.classList.add('revealed'); });
+                        container.querySelectorAll('[data-magnetic]').forEach(function(el) {
+                            el.addEventListener('mousemove', function(e) {
+                                var r = this.getBoundingClientRect();
+                                this.style.transform = 'translate(' + ((e.clientX - r.left - r.width/2) * 0.3) + 'px,' + ((e.clientY - r.top - r.height/2) * 0.3) + 'px)';
+                            });
+                            el.addEventListener('mouseleave', function() { this.style.transform = ''; });
+                        });
+                        container.querySelectorAll('[data-ripple]').forEach(function(el) {
+                            el.addEventListener('click', function(e) {
+                                var r = this.getBoundingClientRect();
+                                var ri = document.createElement('span'); ri.className = 'btn-ripple';
+                                var s = Math.max(r.width, r.height);
+                                ri.style.width = ri.style.height = s + 'px';
+                                ri.style.left = (e.clientX - r.left - s/2) + 'px';
+                                ri.style.top = (e.clientY - r.top - s/2) + 'px';
+                                this.appendChild(ri);
+                                setTimeout(function() { ri.remove(); }, 600);
+                            });
+                        });
                         if (tab === 'engagement') {
                             var cover = document.getElementById('engagementCover');
                             var detail = document.getElementById('engagementDetail');
