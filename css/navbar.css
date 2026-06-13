@@ -179,4 +179,7 @@
     .hamburger {
         display: flex;
     }
+    .mobile-hide {
+        display: none !important;
+    }
 }
