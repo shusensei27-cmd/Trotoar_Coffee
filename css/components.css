@@ -1418,43 +1418,27 @@
 }
 
 @media (max-width: 768px) {
-    .hero-title { font-size: clamp(2rem, 8vw, 3rem); letter-spacing: 0.06em; }
-    .hero-subtitle { font-size: 0.95rem; }
-    .hero-desc { font-size: 0.85rem; max-width: 100%; padding: 0 4px; }
-    .hero-content { padding: 0 16px; }
-    .hero-logo-img { height: clamp(70px, 18vw, 100px); }
-    .btn { padding: 12px 22px; font-size: 0.75rem; }
-    .section-padding { padding: 48px 0; }
-    .section-heading { font-size: 1.6rem; letter-spacing: 0.03em; }
-    .section-tag { font-size: 0.68rem; }
-    .menu-grid, .menu-grid-full { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .menu-card-body { padding: 12px 10px 14px; }
-    .menu-card-body h3 { font-size: 1rem; }
-    .menu-card-body p { font-size: 0.7rem; line-height: 1.4; margin-bottom: 8px; }
-    .menu-card-price { font-size: 0.78rem; }
-    .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .hero-title { font-size: clamp(2.2rem, 8vw, 3.2rem); letter-spacing: 0.06em; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-desc { font-size: 0.85rem; }
+    .btn { padding: 12px 26px; font-size: 0.78rem; }
+    .menu-grid, .menu-grid-full { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .menu-card-body { padding: 14px 12px 16px; }
+    .menu-card-body h3 { font-size: 1.05rem; }
+    .menu-card-body p { font-size: 0.72rem; }
+    .menu-card-price { font-size: 0.8rem; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .gallery-item.wide { grid-column: span 2; }
     .gallery-item.tall { grid-row: span 1; }
     .gallery-grid-full { grid-template-columns: 1fr; }
     .gallery-grid-full .gallery-item.wide { grid-column: span 1; }
     .sticky-notes-board { gap: 16px; padding: 20px 14px; }
-    .sticky-note { width: clamp(140px, 40vw, 180px); min-height: 100px; padding: 20px 14px 16px; font-size: 0.78rem; }
-    .testimoni-grid { grid-template-columns: 1fr; gap: 16px; }
-    .testimoni-card { padding: 20px; }
-    .testimoni-text { font-size: 0.9rem; }
-    .lokasi-map { min-height: 220px; }
-    .map-placeholder { min-height: 220px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .info-list { gap: 14px; }
-    .info-item p { font-size: 0.82rem; }
-    .tentang-grid { gap: 28px; }
-    .tentang-paragraph { font-size: 0.92rem; }
-    .tentang-quote { font-size: 1rem; padding-left: 16px; }
-    .owner-quote { font-size: 1rem; }
-    .owner-name { font-size: 1.1rem; }
-    .owner-photo-frame { width: 180px; height: 220px; }
-    .event-preview-card { padding: 18px; gap: 12px; }
-    .event-preview-day { font-size: 1.5rem; }
+    .sticky-note { width: clamp(140px, 40vw, 180px); min-height: 100px; padding: 22px 16px 18px; font-size: 0.8rem; }
+    .testimoni-grid { grid-template-columns: 1fr; }
+    .lokasi-map { min-height: 250px; }
+    .map-placeholder { min-height: 250px; }
+    .section-heading { font-size: 1.8rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .blog-card { flex-direction: column; }
     .blog-card-image { width: 100%; aspect-ratio: 16/9; }
     .blog-card-body { padding: 16px; }
@@ -1466,57 +1450,29 @@
     .lightbox-nav { font-size: 2rem; padding: 10px; }
     .lightbox-prev { left: 8px; }
     .lightbox-next { right: 8px; }
-    .menu-text-board { padding: 24px 16px; }
-    .menu-text-cat-title { font-size: 1rem; }
-    .menu-text-name { font-size: 0.82rem; }
-    .menu-text-price { font-size: 0.82rem; }
-    .menu-order-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .menu-preview-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .menu-preview-card { aspect-ratio: 2/3; }
-    .menu-preview-overlay h3 { font-size: 0.9rem; }
-    .menu-preview-price { font-size: 0.75rem; }
-    .order-cta-text { font-size: 0.7rem; padding: 4px 14px; }
-    .daily-quote-section { display: none; }
-    .home-engagement-motto { font-size: 0.95rem; }
-    .home-engagement-desc { font-size: 0.85rem; }
-    .engagement-cover { padding: 36px 18px; }
-    .engagement-cover-title { font-size: 1.8rem; }
-    .engagement-cover-motto { font-size: 0.9rem; }
-    .engagement-info-grid { grid-template-columns: 1fr; gap: 12px; }
-    .engagement-detail-paket, .engagement-detail-fasilitas { padding: 16px; }
-    .engagement-detail-cta { padding: 18px; }
-    .page-subnav { top: 54px; padding: 10px 0; }
-    .page-subnav-btn { padding: 6px 14px; font-size: 0.68rem; }
-}@media (max-width: 480px) {
-    .menu-grid, .menu-grid-full { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
+}
+
+@media (max-width: 480px) {
+    .menu-grid, .menu-grid-full { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
     .gallery-grid { grid-template-columns: 1fr; }
     .gallery-item.wide { grid-column: span 1; }
     .gallery-item.tall { grid-row: span 1; }
     .sticky-notes-board { flex-direction: column; align-items: center; gap: 18px; }
-    .sticky-note { width: 90%; max-width: 260px; }
+    .sticky-note { width: 85%; max-width: 260px; }
     .sticky-note:nth-child(1) { transform: rotate(-2deg); }
     .sticky-note:nth-child(2) { transform: rotate(1.5deg); margin-top: 0; }
     .sticky-note:nth-child(3) { transform: rotate(-1deg); margin-top: 0; }
     .sticky-note:nth-child(4) { transform: rotate(2deg); margin-top: 0; }
-    .hero-buttons { flex-direction: column; align-items: center; gap: 10px; }
-    .btn { width: 100%; text-align: center; }
-    .tentang-quote { font-size: 0.9rem; padding-left: 14px; }
-    .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn { width: 80%; text-align: center; }
+    .tentang-quote { font-size: 1rem; padding-left: 14px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
     .event-preview-card { flex-direction: column; align-items: center; text-align: center; }
     .curhat-moods { justify-content: center; }
     .instagram-grid { grid-template-columns: repeat(2, 1fr); }
-    .menu-order-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
-    .menu-preview-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    .menu-preview-card { aspect-ratio: 2/3; }
-    .menu-text-board { padding: 16px 12px; }
-    .menu-text-item { padding: 4px 0; }
-    .section-padding { padding: 36px 0; }
-    .owner-photo-frame { width: 140px; height: 170px; }
-    .engagement-cover { padding: 28px 14px; }
-    .engagement-cover-title { font-size: 1.5rem; }
-    .lokasi-map { min-height: 180px; }
-    .info-item { gap: 10px; }
 }
+
+/* ============ SUB PAGE NAVIGATION ============ */
 .page-subnav {
     background-color: #0d0d0d;
     padding: 16px 0;
